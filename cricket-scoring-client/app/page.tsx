@@ -113,6 +113,18 @@ export default function Home() {
 
   return (
     <div className="">
+        <div className="flex rounded-md overflow-hidden shadow-sm ml-6 mt-4">
+          <button 
+            className="px-4 py-2 text-gray-600 bg-gray-100 hover:bg-gray-200"
+          >
+            Settings
+          </button>
+          <button 
+            className="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600"
+          >
+            Match Commentary
+          </button>
+        </div>
       <div className="min-h-screen lg:grid grid-cols-3 gap-5 px-6 py-4">
         <div className="col-span-2 px-2 pt-8 border shadow-lg rounded-lg">
           <PlayerSelection match={match} />
