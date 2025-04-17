@@ -14,13 +14,15 @@ interface PlayerSelectionProps {
 
 export default function PlayerSelection({ match }: PlayerSelectionProps) {
   return (
-    <div className="grid grid-cols-6 gap-5 mb-14 font-medium">
-      <div className="col-span-4">
-        <div className="flex justify-around gap-2">
-          <div>
-            <div>Batsman (Striker)</div>
+    <div className="grid grid-cols-1 md:grid-cols-6 gap-5 mb-14 font-medium">
+      {/* Batsmen Section - Full width on mobile, 4/6 on larger screens */}
+      <div className="col-span-1 md:col-span-4">
+        <div className="flex flex-col sm:flex-row justify-around gap-4">
+          {/* Striker Section */}
+          <div className="flex-1">
+            <div className="mb-2">Batsman (Striker)</div>
             <Select>
-              <SelectTrigger className="w-[80px] sm:w-[108px] md:w-[140px] lg:w-[196px] xl:w-[250px] 2xl:w-[386px]">
+              <SelectTrigger className="w-full">
                 <SelectValue
                   placeholder={`${
                     match?.currentBattingTeam === "teamA"
@@ -39,14 +41,16 @@ export default function PlayerSelection({ match }: PlayerSelectionProps) {
             </Select>
           </div>
 
-          <div className="flex items-center justify-center">
-            <IoMdSwap color="red" size={"25px"} />
+          {/* Swap Icon - Center vertically and horizontally */}
+          <div className="flex items-center justify-center self-center">
+            <IoMdSwap color="red" size={25} />
           </div>
 
-          <div>
-            <div>Batsman (Non Striker)</div>
+          {/* Non Striker Section */}
+          <div className="flex-1">
+            <div className="mb-2">Batsman (Non Striker)</div>
             <Select>
-              <SelectTrigger className="w-[80px] sm:w-[108px] md:w-[140px] lg:w-[196px] xl:w-[250px] 2xl:w-[386px]">
+              <SelectTrigger className="w-full">
                 <SelectValue
                   placeholder={`${
                     match?.currentBattingTeam === "teamA"
@@ -67,11 +71,12 @@ export default function PlayerSelection({ match }: PlayerSelectionProps) {
         </div>
       </div>
 
-      <div className="col-span-2 flex justify-center">
-        <div>
-          <div>Bowler</div>
+      {/* Bowler Section - Full width on mobile, 2/6 on larger screens */}
+      <div className="col-span-1 md:col-span-2 flex justify-center">
+        <div className="w-full md:max-w-sm">
+          <div className="mb-2">Bowler</div>
           <Select>
-            <SelectTrigger className="w-[80px] sm:w-[108px] md:w-[140px] lg:w-[196px] xl:w-[250px] 2xl:w-[390px]">
+            <SelectTrigger className="w-full">
               <SelectValue
                 placeholder={`${
                   match?.currentBattingTeam === "teamA"
