@@ -158,6 +158,23 @@ export default function SignUp() {
               transition={{ delay: 0.3 }}
             >
               <CardTitle className="text-3xl font-bold mb-2">Create Account</CardTitle>
+              <motion.p 
+                className="text-gray-500 text-sm flex items-center justify-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2 }}
+              >
+                <span>Already have an account?</span>
+                <Button 
+                  variant="link" 
+                  asChild 
+                  className="ml-1.5 font-semibold text-teal-600 hover:text-teal-700 p-0 h-auto"
+                >
+                  <Link href="/auth/signin">
+                    Sign in
+                  </Link>
+                </Button>
+              </motion.p>
               <CardDescription className="text-teal-50 text-lg">Join our community today</CardDescription>
             </motion.div>
             <div className="absolute -bottom-6 left-0 right-0 flex justify-center">
@@ -380,7 +397,7 @@ export default function SignUp() {
           </CardContent>
 
           <CardFooter className="flex justify-center pb-8 px-8">
-            <motion.p 
+            {/* <motion.p 
               className="text-gray-500 text-sm flex items-center justify-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -396,7 +413,7 @@ export default function SignUp() {
                   Sign in
                 </Link>
               </Button>
-            </motion.p>
+            </motion.p> */}
           </CardFooter>
         </Card>
         

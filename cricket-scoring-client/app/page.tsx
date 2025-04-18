@@ -69,7 +69,7 @@ export default function Home() {
       const backend_url = process.env.NEXT_PUBLIC_BACKEND_URL?.split("//")[1];
       const wsUrl = backend_url 
         ? `${backend_url.startsWith("localhost") ? "ws" : "wss"}://${backend_url}` 
-        : "ws://localhost:3001";
+        : "ws:https://assignment-5nli.onrender.com";
       
       const newWs = new WebSocket(wsUrl);
       
