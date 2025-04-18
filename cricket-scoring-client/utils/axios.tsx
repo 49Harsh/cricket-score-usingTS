@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
+const baseURL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://assignment-5nli.onrender.com";
 
 export const apiClient = axios.create({
   baseURL: `${baseURL}/api/v1`,
