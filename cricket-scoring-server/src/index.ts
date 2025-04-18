@@ -23,11 +23,11 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING || "mongodb://localhost:2
     process.exit(1);
   });
 
-app.use(cors({
-  origin: process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000",
-  credentials: true
-}));
-app.use(express.json());
+  app.use(cors({
+    origin: "*", 
+    credentials: true
+  }));
+  app.use(express.json());
 
 // Update Scoreboard API
 app.post("/api/v1/update-score", authMiddleware, async (req, res) => {

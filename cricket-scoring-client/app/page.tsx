@@ -357,11 +357,11 @@ export default function Home() {
 
             <div className="flex justify-around items-center py-2">
               <div className="flex flex-col items-center gap-2">
-                <div>IND</div>
+                <div>Chennai Super Kings</div>
                 <div>
                   <Avatar className="size-14">
-                    <AvatarImage src="/india.webp" alt="India flag" />
-                    <AvatarFallback>IND</AvatarFallback>
+                    <AvatarImage src="/Chennai_Super_Kings_Logo.svg.webp" alt="India flag" />
+                    <AvatarFallback>Chennai Super Kings</AvatarFallback>
                   </Avatar>
                 </div>
                 <div className="border rounded-lg text-center px-2 py-1">
@@ -378,11 +378,11 @@ export default function Home() {
               <div className="text-red-600 font-bold text-xl">vs</div>
 
               <div className="flex flex-col items-center gap-2">
-                <div>BAN</div>
+                <div>Kolkata Knight Riders</div>
                 <div>
                   <Avatar className="size-14">
-                    <AvatarImage src="/bangladesh.webp" alt="Bangladesh flag" />
-                    <AvatarFallback>BAN</AvatarFallback>
+                    <AvatarImage src="/Kolkata_Knight_Riders_Logo.svg.png" alt="Bangladesh flag" />
+                    <AvatarFallback>Kolkata Knight Riders</AvatarFallback>
                   </Avatar>
                 </div>
                 <div className="border rounded-lg text-center px-2 py-1">
