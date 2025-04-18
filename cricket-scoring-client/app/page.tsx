@@ -86,9 +86,9 @@ export default function Home() {
         }
       };
 
-      newWs.onerror = (error) => {
-        console.log("WebSocket error - attempting to reconnect");
-      };
+      // newWs.onerror = (error) => {
+      //   console.log("WebSocket error - attempting to reconnect");
+      // };
 
       newWs.onclose = () => {
         console.log("WebSocket disconnected");
